@@ -1,0 +1,20 @@
+<div>
+    <h1>Parabéns</h1>
+    <h4>Seu componente está sendo exibido</h4>
+    <hr>
+    <h5>Como está exibido seu evento abaixo?</h5>
+    
+    <div *ngFor="let evento of eventos" style="margin-top:30px">
+      Event: {{evento.name}}    
+    <div>
+      Date: {{evento.date}}
+    </div>
+    <div>
+      Time: {{evento.time}}
+    </div>
+    <div *ngIf="evento.location">
+      <p>Local: {{evento.location?.address}}   </p>
+      <p>Cidade: {{evento.location?.city}}   </p>
+      <p>País: {{evento.location?.country}}     </p>
+    </div>    
+  </div>
